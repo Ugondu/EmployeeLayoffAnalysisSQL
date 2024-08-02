@@ -19,7 +19,7 @@
 ## Objective
 The primary objective of this project is to conduct an analysis of global employee layoff over the years available in the dataset. Our client a non-governmental organisation appreciates a detailed, comprehensive analysis to identify patterns, causes, and impacts and provide insights to inform decision making and planning.
 
-###### To achieve this objective
+#### To achieve this objective
 We would create a dashboard that provides insight to the KPIs and charts required.
 * Total Employee count
 * Total Fund Raised
