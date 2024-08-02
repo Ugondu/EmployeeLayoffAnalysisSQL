@@ -3,17 +3,17 @@
 ![image](https://github.com/user-attachments/assets/9f79b542-ab35-4edc-92ac-ee5c26aa86e2)
 
 ## Table of Contents
--[Objective](#objective)
--[Data Source](#data-source)
--[Data Processing Steps](#data-processing-steps)
-	-[Data Cleaning](#data-cleaning)
-	-[Data Transformation](#data-transformation)
--[Visualization](#visualization)
-	-[Results](#results)
-	-[PowerBi DAX Measures](#powerbi-dax-measures)
--[Analysis](#analysis)
-	-[Findings](#findings)
--[Conclusion](#conclusion)
+- [Objective](#objective)
+- [Data Source](#data-source)
+- [Data Processing Steps](#data-processing-steps)
+	- [Data Cleaning](#data-cleaning)
+	- [Data Transformation](#data-transformation)
+- [Visualization](#visualization)
+	- [Results](#results)
+	- [PowerBi DAX Measures](#powerbi-dax-measures)
+- [Analysis](#analysis)
+	- [Findings](#findings)
+- [Conclusion](#conclusion)
 
 # Objective
 The primary objective of this project is to conduct an analysis of global employee layoff over the years available in the dataset. Our client a non-governmental organisation appreciates a detailed, comprehensive analysis to identify patterns, causes, and impacts and provide insights to inform decision making and planning.
