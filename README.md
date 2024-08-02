@@ -2,22 +2,23 @@
 
 ![image](https://github.com/user-attachments/assets/9f79b542-ab35-4edc-92ac-ee5c26aa86e2)
 
+
 ## Table of Contents
 - [Objective](#objective)
 - [Data Source](#data-source)
 - [Data Processing Steps](#data-processing-steps)
-	- [Data Cleaning](#data-cleaning)
-	- [Data Transformation](#data-transformation)
+   - [Data Cleaning](#data-cleaning)
+   - [Data Transformation](#data-transformation)
 - [Visualization](#visualization)
-	- [Results](#results)
-	- [PowerBi DAX Measures](#powerbi-dax-measures)
+   - [Results](#results)
+   - [PowerBi DAX Measures](#powerbi-dax-measures)
 - [Analysis](#analysis)
-	- [Findings](#findings)
+   - [Findings](#findings)
 - [Conclusion](#conclusion)
 
-# Objective
+## Objective
 The primary objective of this project is to conduct an analysis of global employee layoff over the years available in the dataset. Our client a non-governmental organisation appreciates a detailed, comprehensive analysis to identify patterns, causes, and impacts and provide insights to inform decision making and planning.
-- To achieve this objective
+-To achieve this objective
 We would create a dashboard that provides insight to the KPIs and charts required.
 * Total Employee count
 * Total Fund Raised
@@ -27,7 +28,7 @@ We would create a dashboard that provides insight to the KPIs and charts require
 * Layoff by company
 
 ## Data Source
--	What data is needed to achieve our objective?
+-What data is needed to achieve our objective?
 The data required will include:
 -	Company
 -	Industry
@@ -45,10 +46,10 @@ The data is sourced from “Alex the Analyst” GitHub page, and the link can be
 To prepare the dataset for analysis, we will examine for errors, inconsistencies, whitespaces, blank, and null fields that may arise due to data entry and collection.
 ### Data Cleaning
 To Refine and structure the dataset suitable for further exploratory data analysis, 
-*Standardise dataset
-*Remove duplicates
-*Remove null and blank fields
-*Removing columns not relevant to our analysis
+* Standardise dataset
+* Remove duplicates
+* Remove null and blank fields
+* Removing columns not relevant to our analysis
 ### Data Transformation
 ```sql
 /* 
@@ -61,70 +62,83 @@ To Refine and structure the dataset suitable for further exploratory data analys
 # 7. Removing duplicates 
 */
 
---1.  UPDATE 
-layoffs_copy2
-SET company = TRIM(company);
---2. SELECT	
- 	DISTINCT industry
-FROM layoffs_copy2
-ORDER BY industry;
+--1.
+UPDATE 
+    layoffs_copy2
+    SET company = TRIM(company);
+--2.
+SELECT	
+    DISTINCT industry
+    FROM layoffs_copy2
+    ORDER BY industry;
+
 -- 'Crypto' appeared in different forms, so this is to be updated
 SELECT *
-FROM layoffs_copy2
-WHERE industry LIKE 'Crypto%';
+    FROM layoffs_copy2
+    WHERE industry LIKE 'Crypto%';
+
 -- UPDATE THE COLUMN
 UPDATE
- layoffs_copy2
-SET industry = 'Crypto'
-WHERE industry LIKE 'Crypto%';
+    layoffs_copy2
+    SET industry = 'Crypto'
+    WHERE industry LIKE 'Crypto%';
+
 -- Overview of location and Country
+
 SELECT
- DISTINCT country
-FROM layoffs_copy2
-WHERE country LIKE 'United Stat__.';
+    DISTINCT country
+    FROM layoffs_copy2
+    WHERE country LIKE 'United Stat__.';
 
---3. SELECT 
-DISTINCT country, TRIM(TRAILING '.' FROM country)
-FROM layoffs_copy2;
---4. UPDATE 
-layoffs_copy2
-SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
-ALTER TABLE 
-layoffs_copy2
-MODIFY COLUMN `date` DATE;
---5.  SELECT 
-TB1.industry, TB2.industry
-FROM layoffs_copy2 AS TB1
-JOIN layoffs_copy2 AS TB2
+--3.
+SELECT 
+   DISTINCT country, TRIM(TRAILING '.' FROM country)
+    FROM layoffs_copy2;
+
+--4.
+UPDATE 
+   layoffs_copy2
+   SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
+   ALTER TABLE 
+   layoffs_copy2
+   MODIFY COLUMN `date` DATE;
+
+--5.
+SELECT 
+    TB1.industry, TB2.industry
+    FROM layoffs_copy2 AS TB1
+     JOIN layoffs_copy2 AS TB2
 		ON TB1.company=TB2.company
-WHERE (TB1.industry IS NULL OR TB1.industry = '')
-AND TB2.industry IS NOT NULL;
+     WHERE (TB1.industry IS NULL OR TB1.industry = '')
+     AND TB2.industry IS NOT NULL;
 
-	UPDATE 
-layoffs_copy2
-SET industry = NULL
-WHERE industry ='';
+UPDATE 
+     layoffs_copy2
+     SET industry = NULL
+     WHERE industry ='';
 
 UPDATE
- layoffs_copy2 AS TB1
-JOIN layoffs_copy2 AS TB2
+    layoffs_copy2 AS TB1
+    JOIN layoffs_copy2 AS TB2
 		ON TB1.company = TB2.company
-SET TB1.industry = TB2.industry
-WHERE TB1.industry IS NULL 
-AND TB2.industry IS NOT NULL;
-	--6. SELECT *
-FROM layoffs_copy2
-WHERE total_laid_off IS NULL
-AND percentage_laid_off IS NULL;
+    SET TB1.industry = TB2.industry
+    WHERE TB1.industry IS NULL 
+    AND TB2.industry IS NOT NULL;
+
+--6.
+SELECT *
+    FROM layoffs_copy2
+    WHERE total_laid_off IS NULL
+    AND percentage_laid_off IS NULL;
 
 DELETE 
-FROM layoffs_copy2
-WHERE total_laid_off IS NULL
-AND percentage_laid_off IS NULL;
+    FROM layoffs_copy2
+    WHERE total_laid_off IS NULL
+     AND percentage_laid_off IS NULL;
 ```
-# Visualization
-## Results
--	What does the dashboard look like?
+## Visualization
+### Results
+- What does the dashboard look like?
 ![image](https://github.com/user-attachments/assets/072b0ec1-ed5e-4b78-81bf-9c8d28e5055e)
 
 This shows employee layoff by industries and companies globally.
