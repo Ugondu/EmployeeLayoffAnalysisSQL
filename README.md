@@ -19,7 +19,7 @@
 ## Objective
 The primary objective of this project is to conduct an analysis of global employee layoff over the years available in the dataset. Our client a non-governmental organisation appreciates a detailed, comprehensive analysis to identify patterns, causes, and impacts and provide insights to inform decision making and planning.
 
-#### To achieve this objective
+#### To achieve this objective;
 We would create a dashboard that provides insight to the KPIs and charts required.
 * Total Employee count
 * Total Fund Raised
@@ -29,7 +29,7 @@ We would create a dashboard that provides insight to the KPIs and charts require
 * Layoff by company
 
 ## Data Source
-- What data is needed to achieve our objective?
+#### What data is needed to achieve our objective?
 The data required will include:
 * Company
 * Industry
@@ -141,7 +141,7 @@ DELETE
 ```
 ## Visualization
 ### Results
-- What does the dashboard look like?
+#### What does the dashboard look like?
 ![image](https://github.com/user-attachments/assets/072b0ec1-ed5e-4b78-81bf-9c8d28e5055e)
 
 This shows employee layoff by industries and companies globally.
