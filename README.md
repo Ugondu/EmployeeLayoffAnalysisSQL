@@ -18,7 +18,8 @@
 
 ## Objective
 The primary objective of this project is to conduct an analysis of global employee layoff over the years available in the dataset. Our client a non-governmental organisation appreciates a detailed, comprehensive analysis to identify patterns, causes, and impacts and provide insights to inform decision making and planning.
--To achieve this objective
+
+- To achieve this objective
 We would create a dashboard that provides insight to the KPIs and charts required.
 * Total Employee count
 * Total Fund Raised
@@ -28,17 +29,17 @@ We would create a dashboard that provides insight to the KPIs and charts require
 * Layoff by company
 
 ## Data Source
--What data is needed to achieve our objective?
+- What data is needed to achieve our objective?
 The data required will include:
--	Company
--	Industry
--	Location
--	Total laid off
--	Percentage Laid Off
--	Stage
--	Date
--	Country
--	Funds Raised 
+* Company
+* Industry
+* Location
+* Total laid off
+* Percentage Laid Off
+* Stage
+* Date
+* Country
+* Funds Raised 
 
 ### Where has the dataset originated from?
 The data is sourced from “Alex the Analyst” GitHub page, and the link can be seen [see here to find it.](https://github.com/AlexTheAnalyst/MySQL-YouTube-Series/blob/main/layoffs.csv)
@@ -50,6 +51,8 @@ To Refine and structure the dataset suitable for further exploratory data analys
 * Remove duplicates
 * Remove null and blank fields
 * Removing columns not relevant to our analysis
+
+  
 ### Data Transformation
 ```sql
 /* 
