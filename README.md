@@ -17,14 +17,14 @@
 
 # Objective
 The primary objective of this project is to conduct an analysis of global employee layoff over the years available in the dataset. Our client a non-governmental organisation appreciates a detailed, comprehensive analysis to identify patterns, causes, and impacts and provide insights to inform decision making and planning.
--	To achieve this objective
+- To achieve this objective
 We would create a dashboard that provides insight to the KPIs and charts required.
-*Total Employee count
-*Total Fund Raised
-*Trend of employee layoff
-*Layoff by industry
-*Layoff by country
-*Layoff by company
+* Total Employee count
+* Total Fund Raised
+* Trend of employee layoff
+* Layoff by industry
+* Layoff by country
+* Layoff by company
 
 ## Data Source
 -	What data is needed to achieve our objective?
@@ -122,7 +122,7 @@ FROM layoffs_copy2
 WHERE total_laid_off IS NULL
 AND percentage_laid_off IS NULL;
 ```
-#Visualization
+# Visualization
 ## Results
 -	What does the dashboard look like?
 ![image](https://github.com/user-attachments/assets/072b0ec1-ed5e-4b78-81bf-9c8d28e5055e)
@@ -151,7 +151,7 @@ RETURN roundedFundsInBillions
 
 ```
 # Analysis
-##Findings
+## Findings
 Our Analysis will be guided by the following business questions below-
 1.	Which industries have the highest layoff rates?
 2.	How has employee lay off progressed over time?
@@ -212,7 +212,7 @@ Our Analysis will be guided by the following business questions below-
 3.	For countries with the most layoffs, United States, India, and The Netherlands are top of the list.
 4.	The year 2022 has the highest number of employee layoff in the dataset made available.
 
-##Conclusion
+## Conclusion
 From 2021 to 2024, high employee layoffs were driven by COVID-19 impacts, supply chain disruptions, economic uncertainty, inflation, and the shift to e-commerce due to lockdowns. These factors heavily affected retail and consumer industries, particularly in the US and India, where major companies like Amazon and Google led staff reductions due to overexpansion and changing market conditions.
 
 
