@@ -1,16 +1,10 @@
--- EXPLORATIRY DATA ANALYSIS.
--- PROBLEM OVERVIEW
---  Recent widespread layoffs across various industries highlight the need
---  for a comprehensive analysis to understand their patterns, causes, and impacts. 
---  This project uses a detailed dataset on companies, locations, industries, 
---  layoff statistics, and financial backgrounds to uncover trends, 
---  compare affected sectors and regions, and examine the relationship 
---  between company characteristics and layoffs. 
---  The aim is to identify key insights, predict future layoffs, 
---  and inform strategic decision-making and policy formulation. 
---  By understanding layoff dynamics, businesses and policymakers can better manage 
---  and mitigate the adverse effects on employees, companies, and the economy.
-
+/*EXPLORATIRY DATA ANALYSIS.
+PROBLEM OVERVIEW
+Recent widespread layoffs across various industries highlight the need for a comprehensive analysis to understand their patterns, causes, and impacts. 
+This project uses a detailed dataset on companies, locations, industries, layoff statistics, and financial backgrounds to uncover trends, compare affected sectors and regions, and examine the relationship between company characteristics and layoffs. 
+The aim is to identify key insights, predict future layoffs, and inform strategic decision-making and policy formulation. By understanding layoff dynamics, businesses and policymakers can better manage 
+ and mitigate the adverse effects on employees, companies, and the economy.
+*/
 -- BUSINESS PROBLEM
 -- 1. Which industries have the highest layoff rates
 -- 2. How has employee lay off progressed over time
